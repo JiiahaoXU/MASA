@@ -61,5 +61,3 @@ If you find our repository is useful for your work, please cite our work:
 
 ## Acknowledgment
 Our code is constructed on https://github.com/git-disl/Lockdown, big thanks to their contribution!
-
-Additionally, we would like to thank the work that helped our paper:
