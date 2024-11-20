@@ -1,5 +1,9 @@
 ## Identify Backdoored Model in Federated Learning via Individual Unlearning
 
+This is the official implementation for WACV'25 paper "Identify Backdoored Model in Federated Learning via Individual Unlearning", you can find the paper [here][paper].
+
+[paper]: https://arxiv.org/abs/2409.01435
+
 ## Usage
 
 If you have any issues using this repo, feel free to contact Jiahao @ jiahaox@unr.edu.
