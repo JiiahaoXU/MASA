@@ -4,6 +4,8 @@
 
 If you have any issues using this repo, feel free to contact Jiahao @ jiahaox@unr.edu.
 
+The proposed MASA algorithm is placed in `src/aggregation.py`, and you can easily take it and integrate MASA with your code.
+
 ### Environment
 
 Our code does not rely on special libraries or tools, so it can be easily integrated with most environment settings. 
