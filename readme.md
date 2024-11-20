@@ -2,7 +2,7 @@
 
 This is the official implementation for WACV'25 paper "Identify Backdoored Model in Federated Learning via Individual Unlearning", you can find the paper [here][paper].
 
-[paper]: https://arxiv.org/abs/2409.01435
+[paper]: https://arxiv.org/abs/2411.01040
 
 ## Usage
 
