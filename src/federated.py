@@ -139,8 +139,6 @@ if __name__ == "__main__":
             iid_str = 'noniid(%.1f)' % args.alpha
         else:
             iid_str = 'iid'
-        # if args.non_iid_par:
-        #     iid_str = 'noniid_par(%.1f)' % args.alpha
 
         args.exp_name = iid_str + '_pr(%.1f)' % args.poison_frac
 
@@ -167,7 +165,7 @@ if __name__ == "__main__":
         fileHandler.setFormatter(logFormatter)
         rootLogger.addHandler(fileHandler)
         console_handler = logging.StreamHandler()
-        console_handler.setLevel(logging.DEBUG)  # 设置日志级别
+        console_handler.setLevel(logging.DEBUG) 
         console_handler.setFormatter(logFormatter)
         rootLogger.addHandler(console_handler)
     logging.info(args)
