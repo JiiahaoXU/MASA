@@ -33,7 +33,7 @@ python federated.py --data cifar10 --num_agents 20 \
 If you want to run a case with non-IID settings, you can easily use the following command:
 
 ```
-python federated.py --data cifar10 --num_agents 20 \
+python federated.py --data cifar100 --num_agents 20 \
 --attack badnet --poison_frac 0.3 --num_corrupt 4 \
 --aggr masa \
 --non_iid --alpha 0.5
