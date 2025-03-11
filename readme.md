@@ -57,11 +57,13 @@ For other arguments, you can check the `federated.py` file where the detailed ex
 ## Citation
 If you find our repository is useful for your work, please cite our work:
 ```
-@article{xu2024identify,
-  title={Identify Backdoored Model in Federated Learning via Individual Unlearning},
-  author={Xu, Jiahao and Zhang, Zikai and Hu, Rui},
-  journal={arXiv preprint arXiv:2411.01040},
-  year={2024}
+@InProceedings{Xu_2025_WACV,
+    author    = {Xu, Jiahao and Zhang, Zikai and Hu, Rui},
+    title     = {Identify Backdoored Model in Federated Learning via Individual Unlearning},
+    booktitle = {Proceedings of the Winter Conference on Applications of Computer Vision (WACV)},
+    month     = {February},
+    year      = {2025},
+    pages     = {7949-7958}
 }
 ```
 
