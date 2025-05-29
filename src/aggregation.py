@@ -179,8 +179,8 @@ class Aggregation():
         logging.info('benign update index:   %s' % str(benign_id))
         logging.info('selected update index: %s' % str(benign_set))
 
-        logging.info('FPR:       %.4f'  % FPR)
-        logging.info('TPR:       %.4f' % TPR)
+        logging.info('FPR:       %.2f%%'  % (FPR * 100))
+        logging.info('TPR:       %.2f%%' % (TPR * 100))
 
         self.tpr_history.append(TPR)
         self.fpr_history.append(FPR)

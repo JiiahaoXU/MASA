@@ -304,9 +304,9 @@ if __name__ == "__main__":
                                                                                        rnd, num_target)
                 
                 del test_model
-            logging.info('Main task accuracy:      %.4f' % val_acc)
-            logging.info('Backdoor task accuracy:  %.4f' % asr)
-            logging.info('Robustness accuracy:     %.4f' % poison_acc)
+            logging.info('Main task accuracy:      %.2f%%' % (val_acc * 100))
+            logging.info('Backdoor task accuracy:  %.2f%%' % (asr * 100))
+            logging.info('Robustness accuracy:     %.2f%%' % (poison_acc * 100))
 
             if val_acc > best_acc:
                 best_acc = val_acc
@@ -316,12 +316,12 @@ if __name__ == "__main__":
         logging.info("------------------------------".format(rnd))
 
     logging.info('Best results:')
-    logging.info('Main task accuracy:      %.4f' % best_acc)
-    logging.info('Backdoor task accuracy:  %.4f' % best_asr)
-    logging.info('Robustness accuracy:     %.4f' % best_bcdr_acc)
+    logging.info('Main task accuracy:      %.2f%%' % (best_acc * 100))
+    logging.info('Backdoor task accuracy:  %.2f%%' % (best_asr * 100))
+    logging.info('Robustness accuracy:     %.2f%%' % (best_bcdr_acc * 100))
 
     if len(aggregator.tpr_history) > 0:
-        logging.info('Avg TPR:                 %.4f' % (sum(aggregator.tpr_history) / len(aggregator.tpr_history)))
-        logging.info('Avg FPR:                 %.4f' % (sum(aggregator.fpr_history) / len(aggregator.fpr_history)))
+        logging.info('Avg TPR:                 %.2f%%' % ((sum(aggregator.tpr_history) / len(aggregator.tpr_history)) * 100))
+        logging.info('Avg FPR:                 %.2f%%' % ((sum(aggregator.fpr_history) / len(aggregator.fpr_history)) * 100))
 
     logging.info('Training has finished!')
