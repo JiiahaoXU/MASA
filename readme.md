@@ -22,11 +22,13 @@ All tested datasets are available on `torchvision` and will be downloaded automa
 
 ### Example
 
+In our experiments, unless otherwise specified, the default attack method is `Badnet` with a data poisoning ratio `r=0.5`. The FL system contains `20` clients, and `20%` of them are malicious. No `client sampling` will be employed.
+
 Generally, to run a case with default settings, you can easily use the following command:
 
 ```
 python federated.py --data cifar10 --num_agents 20 \
---attack badnet --poison_frac 0.3 --num_corrupt 4 \
+--attack badnet --poison_frac 0.5 --num_corrupt 4 \
 --aggr masa
 ```
 
@@ -34,23 +36,23 @@ If you want to run a case with non-IID settings, you can easily use the followin
 
 ```
 python federated.py --data cifar100 --num_agents 20 \
---attack badnet --poison_frac 0.3 --num_corrupt 4 \
+--attack badnet --poison_frac 0.5 --num_corrupt 4 \
 --aggr masa \
 --non_iid --alpha 0.5
 ```
 
 Here,
 
-| Argument        | Type       | Description   | Choice |
-|-----------------|------------|---------------|--------|
-| `aggr`         | str   | Defense method applied by the server | avg, masa, rlr, mkrum, mul_metric, lockdown, fg, rfa|
-| `data`    |   str     | Main task data        | cifar10, cifar100 |
-| `num_agents`         | int | Number of clients in FL   | N/A |
-| `attack`         | str | Attack method   | badnet, DBA, neurotoxin, pgd, lie |
-| `poison_frac`         | float | Data poisoning ratio   | [0.0, 1.0] |
-| `num_corrupt`         | int | Number of malicious clients in FL   | [0, num_agents//2-1] |
-| `non_iid`         | store_true | Enable non-IID settings or not      | N/A |
-| `alpha`         | float | Data heterogeneous degree     | [0.1, 1.0]|
+| Argument        | Type       | Description   | Choice | Default |
+|-----------------|------------|---------------|--------|--------|
+| `aggr`         | str   | Defense method applied by the server | avg, masa, rlr, mkrum, mul_metric, lockdown, fg, rfa| avg|
+| `data`    |   str     | Main task data        | cifar10, cifar100 | cifar10|
+| `num_agents`         | int | Number of clients in FL   | N/A | 20|
+| `attack`         | str | Attack method   | badnet, DBA, neurotoxin, pgd, lie | badnet|
+| `poison_frac`         | float | Data poisoning ratio   | [0.0, 1.0] | 0.5|
+| `num_corrupt`         | int | Number of malicious clients in FL   | [0, num_agents//2-1] | 4|
+| `non_iid`         | store_true | Enable non-IID settings or not      | N/A | False|
+| `alpha`         | float | Data heterogeneous level     | [0.1, 1.0]| 0.5|
 
 For other arguments, you can check the `federated.py` file where the detailed explanation is presented.
 
