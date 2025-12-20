@@ -4,6 +4,16 @@ This is the official implementation for WACV'25 paper "Identify Backdoored Model
 
 [paper]: https://arxiv.org/abs/2411.01040
 
+## Related Methods
+
+If you found MASA is interesting, you may also refer to our other related works on robust federated learning systems:
+
+- **OBA & BNGuard** (MobiHoc 2025, **Oral presentation**): https://github.com/JiiahaoXU/SoDa-BNGuard 
+- **AlignIns** (CVPR 2025, **Highlight**): https://github.com/JiiahaoXU/AlignIns
+- **LASA** (WACV 2025, **Oral presentation**): https://github.com/JiiahaoXU/LASA
+
+All these methods are based on simple and effective ideas for protecting federated learning systems. They are easy to implement and can be directly integrated into this codebase or into existing federated learning frameworks.
+
 ## Usage
 
 If you have any issues using this repo, feel free to contact Jiahao @ jiahaox@unr.edu.
@@ -70,4 +80,4 @@ If you find our repository is useful for your work, please cite our work:
 ```
 
 ## Acknowledgment
-Our code is constructed on https://github.com/git-disl/Lockdown, big thanks to their contribution!
+Our code is partially constructed on https://github.com/git-disl/Lockdown, big thanks to their contribution!
